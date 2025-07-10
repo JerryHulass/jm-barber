@@ -1,4 +1,4 @@
-import { SiInstagram, SiLinkedin, SiX, SiYoutube } from "react-icons/si";
+import { SiFacebook, SiInstagram, SiLinkedin, SiX, SiYelp, SiYoutube } from "react-icons/si";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
@@ -72,7 +72,6 @@ const NavLink = ({ children, href, idx }) => {
 };
 
 const Logo = () => {
-  // Temp logo from https://logoipsum.com/
   return (
     <motion.a
       initial={{ opacity: 0, y: -12 }}
@@ -154,7 +153,7 @@ const FooterCTAs = () => {
               }}
               exit={{ opacity: 0, y: -8 }}
             >
-              <l.Component className="text-xl text-[#E9C664] transition-colors hover:text-violet-300" />
+              <l.Component className="text-2xl text-[#E9C664] transition-colors hover:text-violet-300" />
             </motion.a>
           );
         })}
@@ -201,20 +200,16 @@ const LINKS = [
 
 const SOCIAL_CTAS = [
   {
-    Component: SiX,
-    href: "#",
+    Component: SiYelp,
+    href: "https://www.yelp.com/biz/jm-barber-lounge-elmwood-park?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)",
   },
   {
     Component: SiInstagram,
-    href: "#",
+    href: "https://www.instagram.com/jmbarberlounge/",
   },
   {
-    Component: SiLinkedin,
-    href: "#",
-  },
-  {
-    Component: SiYoutube,
-    href: "#",
+    Component: SiFacebook,
+    href: "https://www.facebook.com/JMBarberLounge",
   },
 ];
 
