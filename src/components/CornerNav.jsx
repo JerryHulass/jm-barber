@@ -1,6 +1,6 @@
+import { SiInstagram, SiLinkedin, SiX, SiYoutube } from "react-icons/si";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { SiInstagram, SiLinkedin, SiX, SiYoutube } from "react-icons/si";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
 
 export const Example = () => {
@@ -27,7 +27,7 @@ const CornerNav = () => {
 
 const LinksOverlay = () => {
   return (
-    <nav className="fixed right-4 top-4 z-40 h-[calc(100vh_-_32px)] w-[calc(100%_-_32px)] overflow-hidden bg-[#121212]">
+    <nav className="fixed right-4 top-4 z-40 h-[calc(100vh_-_32px)] w-[calc(100%_-_32px)] overflow-hidden">
       <Logo />
       <LinksContainer />
       <FooterCTAs />
@@ -64,7 +64,7 @@ const NavLink = ({ children, href, idx }) => {
       }}
       exit={{ opacity: 0, y: -8 }}
       href={href}
-      className="block text-5xl font-semibold text-violet-400 transition-colors hover:!text-white md:text-7xl"
+      className="block text-5xl font-semibold text-[#E9C664] transition-colors hover:text-violet-50 md:text-7xl"
     >
       {children}.
     </motion.a>
@@ -83,25 +83,13 @@ const Logo = () => {
       }}
       exit={{ opacity: 0, y: -12 }}
       href="#"
-      className="grid h-20 w-20 place-content-center rounded-br-xl rounded-tl-xl bg-white transition-colors hover:bg-violet-50"
+      className="grid h-20 w-20 place-content-center rounded-br-xl rounded-tl-xl bg-[#212121] transition-colors hover:bg-white"
     >
-      <svg
-        width="50"
-        height="39"
-        viewBox="0 0 50 39"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="fill-violet-600"
-      >
-        <path
-          d="M16.4992 2H37.5808L22.0816 24.9729H1L16.4992 2Z"
-          stopColor="#FFFFFF"
-        ></path>
-        <path
-          d="M17.4224 27.102L11.4192 36H33.5008L49 13.0271H32.7024L23.2064 27.102H17.4224Z"
-          stopColor="#FFFFFF"
-        ></path>
-      </svg>
+      <img
+        src="/images/jm-logo3.svg"
+        alt="JM Logo"
+        className="h-20 w-20"
+      />
     </motion.a>
   );
 };
@@ -114,7 +102,7 @@ const HamburgerButton = ({ active, setActive }) => {
         animate={active ? "open" : "closed"}
         variants={UNDERLAY_VARIANTS}
         style={{ top: 16, right: 16 }}
-        className="fixed z-10 rounded-xl bg-gradient-to-br from-violet-600 to-violet-500 shadow-lg shadow-violet-800/20"
+        className="fixed z-10 rounded-xl bg-gradient-to-br from-[#212121] to-[#212121] shadow-lg shadow-[#212121]"
       />
 
       <motion.button
@@ -127,17 +115,17 @@ const HamburgerButton = ({ active, setActive }) => {
       >
         <motion.span
           variants={HAMBURGER_VARIANTS.top}
-          className="absolute block h-1 w-10 bg-white"
+          className="absolute block h-1 w-10 bg-[#E9C664]"
           style={{ y: "-50%", left: "50%", x: "-50%" }}
         />
         <motion.span
           variants={HAMBURGER_VARIANTS.middle}
-          className="absolute block h-1 w-10 bg-white"
+          className="absolute block h-1 w-10 bg-[#E9C664]"
           style={{ left: "50%", x: "-50%", top: "50%", y: "-50%" }}
         />
         <motion.span
           variants={HAMBURGER_VARIANTS.bottom}
-          className="absolute block h-1 w-5 bg-white"
+          className="absolute block h-1 w-5 bg-[#E9C664]"
           style={{ x: "-50%", y: "50%" }}
         />
       </motion.button>
@@ -166,7 +154,7 @@ const FooterCTAs = () => {
               }}
               exit={{ opacity: 0, y: -8 }}
             >
-              <l.Component className="text-xl text-white transition-colors hover:text-violet-300" />
+              <l.Component className="text-xl text-[#E9C664] transition-colors hover:text-violet-300" />
             </motion.a>
           );
         })}
@@ -184,7 +172,7 @@ const FooterCTAs = () => {
           },
         }}
         exit={{ opacity: 0, y: 8 }}
-        className="absolute bottom-2 right-2 flex items-center gap-2 rounded-full bg-violet-700 px-3 py-3 text-4xl uppercase text-violet-200 transition-colors hover:bg-white hover:text-violet-600 md:bottom-4 md:right-4 md:px-6 md:text-2xl"
+        className="absolute bottom-2 right-2 flex items-center gap-2 rounded-full bg-[#E9C664] px-3 py-3 text-4xl uppercase text-[#212121] transition-colors hover:bg-[#212121] hover:text-violet-600 md:bottom-4 md:right-4 md:px-6 md:text-2xl"
       >
         <span className="hidden md:block">contact us</span> <FiArrowRight />
       </motion.button>
@@ -198,15 +186,15 @@ const LINKS = [
     href: "#",
   },
   {
-    title: "features",
+    title: "services",
     href: "#",
   },
   {
-    title: "blog",
+    title: "about us",
     href: "#",
   },
   {
-    title: "careers",
+    title: "contact us",
     href: "#",
   },
 ];

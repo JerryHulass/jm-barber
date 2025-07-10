@@ -1,9 +1,6 @@
-import { useState } from "react";
-import { SiInstagram, SiLinkedin, SiX, SiYoutube } from "react-icons/si";
 import CornerNav from "./CornerNav";
 
 export default function Navbar() {
-    const [isMenuOpen, setMenuOpen] = useState(false);
 
     return (
         <nav className="flex items-center pt-8 pr-8 pl-8 justify-end md:justify-between relative">
