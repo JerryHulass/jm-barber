@@ -24,7 +24,9 @@ export default function Navbar() {
                     className="relative items-center justify-center px-10 py-4 overflow-hidden inter tracking-tighter text-white group border-2"
                     style={{ borderColor: "#E9C664" }}
                 >
-                    <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-[#E9C664] rounded-full group-hover:w-56 group-hover:h-56"></span>
+                    <span
+                      className="absolute left-1/2 top-1/2 w-0 h-0 transition-all duration-500 ease-out bg-[#E9C664] rounded-full group-hover:w-56 group-hover:h-56 -translate-x-1/2 -translate-y-1/2"
+                    />
                     <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent"></span>
                     <span className="relative">Book Appointment</span>
                 </a>
