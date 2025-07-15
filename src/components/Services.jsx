@@ -1,4 +1,7 @@
 import Shuffle from "./Shuffle";
+import { FiCloudLightning } from "react-icons/fi";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Services() {
     return (
@@ -43,8 +46,8 @@ export default function Services() {
                 </div>
             </div>
             <div className="pt-12 pb-44 items-center justify-center flex">
-                <a
-                    href="#_"
+                <Link
+                    to="/services"
                     className="relative items-center justify-center px-10 py-4 overflow-hidden inter tracking-tighter text-white group border-2"
                     style={{ borderColor: "#E9C664" }}
                 >
@@ -53,7 +56,7 @@ export default function Services() {
                     />
                     <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent"></span>
                     <span className="relative">Load More</span>
-                </a>
+                </Link>
             </div>
         </div>
     );
@@ -92,14 +95,6 @@ const cards = [
 
 
 
-
-
-
-
-
-
-import { FiCloudLightning } from "react-icons/fi";
-import { motion } from "framer-motion";
 
 
 const ShimmerBorderCard = () => {
