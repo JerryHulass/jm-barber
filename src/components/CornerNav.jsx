@@ -2,6 +2,7 @@ import { SiFacebook, SiInstagram, SiLinkedin, SiX, SiYelp, SiYoutube } from "rea
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 export const Example = () => {
   return (
@@ -51,7 +52,7 @@ const LinksContainer = () => {
 
 const NavLink = ({ children, href, idx }) => {
   return (
-    <motion.a
+    <motion.div
       initial={{ opacity: 0, y: -8 }}
       animate={{
         opacity: 1,
@@ -63,11 +64,14 @@ const NavLink = ({ children, href, idx }) => {
         },
       }}
       exit={{ opacity: 0, y: -8 }}
-      href={href}
-      className="block text-5xl font-semibold text-[#E9C664] transition-colors hover:text-violet-50 md:text-7xl"
     >
-      {children}.
-    </motion.a>
+      <Link
+        to={href}
+        className="block text-5xl font-semibold text-[#E9C664] transition-colors hover:text-violet-50 md:text-7xl"
+      >
+        {children}.
+      </Link>
+    </motion.div>
   );
 };
 
@@ -180,22 +184,10 @@ const FooterCTAs = () => {
 };
 
 const LINKS = [
-  {
-    title: "home",
-    href: "#",
-  },
-  {
-    title: "services",
-    href: "#",
-  },
-  {
-    title: "about us",
-    href: "#",
-  },
-  {
-    title: "contact us",
-    href: "#",
-  },
+  { title: "home", href: "/home" },
+  { title: "services", href: "/services" },
+  { title: "about us", href: "/about" },
+  { title: "contact us", href: "/contact" },
 ];
 
 const SOCIAL_CTAS = [
